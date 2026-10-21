@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "title": "研究任务与关键技术示例",
+  "language": "zh-CN",
+  "mode": "native",
+  "aspect_ratio": "16:9",
+  "content_profile": {
+    "summary_level": "standard",
+    "title_style": "conclusion_first",
+    "max_nodes_per_slide": 7
+  },
+  "style_families": {
+    "research_task": {
+      "colors": {
+        "primary": "173F5F",
+        "accent": "B21F2D",
+        "accent_2": "C8922E",
+        "line": "BAC3CC"
+      }
+    },
+    "technical_architecture": {
+      "colors": {
+        "background": "F3F5F7",
+        "surface": "FFFFFF",
+        "primary": "173F5F",
+        "accent": "B21F2D",
+        "accent_2": "C8922E",
+        "line": "98A6B3"
+      }
+    }
+  },
+  "slides": [
+    {
+      "type": "decomposition",
+      "semantic_intent": "decomposition",
+      "style_family": "research_task",
+      "title": "三类研究任务并行支撑可重构数据流芯片软件栈",
+      "takeaway": "任务之间是协同分工，不虚构先后流程。",
+      "items": [
+        {
+          "heading": "编程接口与前端",
+          "body": "承接领域计算表达并形成统一输入。",
+          "outcome": "统一编程入口"
+        },
+        {
+          "heading": "架构感知映射",
+          "body": "结合计算、存储与互连约束优化映射。",
+          "outcome": "高效硬件执行"
+        },
+        {
+          "heading": "验证评估与调优",
+          "body": "以指标反馈驱动多层参数和实现优化。",
+          "outcome": "端到端闭环"
+        }
+      ]
+    },
+    {
+      "type": "composite_diagram",
+      "semantic_intent": "composite",
+      "style_family": "technical_architecture",
+      "title": "硬件约束进入映射，评估结果反馈多层优化",
+      "takeaway": "关键技术由架构感知映射与端到端验证调优两个协同区域组成。",
+      "panels": [
+        {
+          "heading": "架构感知映射",
+          "width_ratio": 1.25,
+          "diagram": {
+            "kind": "architecture",
+            "direction": "left_to_right",
+            "nodes": [
+              {"id": "front", "label": "Triton 前端", "role": "input"},
+              {"id": "mapping", "label": "编译映射", "role": "process"},
+              {"id": "hardware", "label": "硬件约束", "role": "constraint"},
+              {"id": "runtime", "label": "运行时执行", "role": "output"}
+            ],
+            "edges": [
+              {"from": "front", "to": "mapping", "type": "data"},
+              {"from": "hardware", "to": "mapping", "type": "constraint"},
+              {"from": "mapping", "to": "runtime", "type": "output"}
+            ]
+          }
+        },
+        {
+          "heading": "验证与多层调优",
+          "diagram": {
+            "kind": "cycle",
+            "nodes": [
+              {"id": "run", "label": "运行验证", "role": "process"},
+              {"id": "evaluate", "label": "指标评估", "role": "process"},
+              {"id": "tune", "label": "多层调优", "role": "output"}
+            ],
+            "edges": [
+              {"from": "run", "to": "evaluate", "type": "flow"},
+              {"from": "evaluate", "to": "tune", "type": "flow"},
+              {"from": "tune", "to": "run", "type": "feedback", "label": "反馈"}
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

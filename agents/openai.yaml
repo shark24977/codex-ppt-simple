@@ -1,0 +1,6 @@
+interface:
+  display_name: "Codex PPT Simple"
+  short_description: "Create editable PPTs with content approval first"
+  default_prompt: "Use $codex-ppt-simple to draft and validate the per-slide content first, wait for my approval, and then create an editable PowerPoint in the reference style."
+policy:
+  allow_implicit_invocation: true

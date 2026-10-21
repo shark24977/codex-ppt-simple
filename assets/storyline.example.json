@@ -1,0 +1,18 @@
+{
+  "audience": "technical",
+  "purpose": "说明转换策略及其工程价值",
+  "core_conclusion": "转换链路优先保留结构化优化机会，并以扩展方言覆盖兼容路径。",
+  "sections": [
+    {
+      "title": "转换机制",
+      "slides": [
+        {
+          "question": "如何选择目标表示？",
+          "conclusion": "存在结构化实现时优先转换，否则进入兼容回退路径。",
+          "evidence_ids": ["fact-1"],
+          "page_role": "decision-diagram"
+        }
+      ]
+    }
+  ]
+}

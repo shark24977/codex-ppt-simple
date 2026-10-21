@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "语义流程图示例",
+  "language": "zh-CN",
+  "mode": "native",
+  "aspect_ratio": "16:9",
+  "show_slide_numbers": true,
+  "content_profile": {
+    "audience": "technical",
+    "summary_level": "standard",
+    "title_style": "conclusion_first",
+    "max_bullets": 4,
+    "max_nodes_per_slide": 7,
+    "source_traceability": true,
+    "notes_include_evidence": true
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "title": "语义关系自动转为可编辑流程图",
+      "subtitle": "结论式表达、来源追踪、原生节点与连接线"
+    },
+    {
+      "type": "diagram",
+      "semantic_intent": "decision",
+      "title": "结构化实现优先，缺失时进入兼容回退路径",
+      "takeaway": "转换策略先争取结构化优化机会，再保证复杂算子的覆盖能力。",
+      "evidence": ["结构化算子通常具有更明确的优化和硬件映射机会。"],
+      "source_refs": ["example-report.pdf p.2-3"],
+      "diagram": {
+        "kind": "decision",
+        "direction": "left_to_right",
+        "render": "native",
+        "nodes": [
+          {"id": "input", "label": "规范化输入", "role": "start"},
+          {"id": "check", "label": "存在结构化实现？", "role": "decision"},
+          {"id": "structured", "label": "Structured Op", "body": "进入标准优化链", "role": "output"},
+          {"id": "fallback", "label": "Generic / 扩展方言", "body": "覆盖复杂语义", "role": "output"}
+        ],
+        "edges": [
+          {"from": "input", "to": "check", "type": "flow"},
+          {"from": "check", "to": "structured", "label": "是", "type": "output"},
+          {"from": "check", "to": "fallback", "label": "否", "type": "output"}
+        ]
+      },
+      "notes": "判断条件和两条路径均来自源材料，不额外发明转换分支。"
+    },
+    {
+      "type": "closing",
+      "title": "让页面直接表达结论，让图示准确表达关系",
+      "subtitle": "详细证据保留在演讲者备注中"
+    }
+  ]
+}

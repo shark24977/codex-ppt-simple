@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "title": "可编辑演示文稿示例",
+  "language": "zh-CN",
+  "mode": "hybrid",
+  "aspect_ratio": "16:9",
+  "show_slide_numbers": true,
+  "readability_policy": {
+    "min_title_font": 26,
+    "min_takeaway_font": 17,
+    "min_module_font": 15,
+    "min_body_font": 13.5,
+    "min_diagram_font": 12,
+    "min_label_font": 11,
+    "overflow_action": "revise_or_split"
+  },
+  "emphasis_policy": {
+    "enabled": true,
+    "min_bold_ratio": 0.10,
+    "max_bold_ratio": 0.30,
+    "max_highlights_per_block": 3,
+    "auto_emphasize_leading_labels": true
+  },
+  "density_policy": {
+    "max_visible_characters": 420,
+    "max_primary_blocks": 5,
+    "max_visual_focal_points": 2
+  },
+  "style": {
+    "colors": {
+      "background": "F7F9FC",
+      "surface": "FFFFFF",
+      "text": "17212B",
+      "muted_text": "667085",
+      "primary": "173F5F",
+      "accent": "00A6A6",
+      "accent_2": "F6AE2D",
+      "line": "D9E2EC"
+    },
+    "fonts": {
+      "heading": "Microsoft YaHei",
+      "body": "Microsoft YaHei"
+    }
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "CODEX PPT FINAL",
+      "title": "从参考风格到可编辑幻灯片",
+      "subtitle": "原生文字、图表、表格和结构；图片只负责视觉表达"
+    },
+    {
+      "type": "cards",
+      "title": "设计目标",
+      "takeaway": "可编辑性、风格一致性和生成效率可以同时兼顾。",
+      "cards": [
+        {"value": "100%", "heading": "文本可编辑", "body": "标题、正文和备注均为原生文本框。"},
+        {"value": "Native", "heading": "图表可编辑", "body": "数据系列保留在 PowerPoint 图表中。"},
+        {"value": "Hybrid", "heading": "视觉可替换", "body": "插画是独立素材，不承载关键文字。"}
+      ]
+    },
+    {
+      "type": "process",
+      "semantic_intent": "sequence",
+      "title": "生成流程",
+      "takeaway": "内容规划和样式提取先于页面构建，返工只发生在需要调整的环节。",
+      "steps": [
+        {"heading": "提取风格", "body": "主题、色彩、字体与网格"},
+        {"heading": "锁定叙事", "body": "每页一个明确结论"},
+        {"heading": "原生构建", "body": "文本、形状、图表和表格"},
+        {"heading": "质量检查", "body": "结构、可编辑性与视觉预览"}
+      ]
+    },
+    {
+      "type": "chart",
+      "title": "示例：所有数据仍可修改",
+      "takeaway": "原生图表避免了图片中数字不可修改的问题。",
+      "chart": {
+        "type": "column",
+        "categories": ["方案A", "方案B", "方案C"],
+        "series": [
+          {"name": "效率", "values": [62, 78, 91]},
+          {"name": "可编辑性", "values": [35, 82, 96]}
+        ]
+      }
+    },
+    {
+      "type": "closing",
+      "title": "让视觉风格成为模板，而不是一张截图",
+      "subtitle": "下一步：替换内容、参考模板和品牌资产"
+    }
+  ]
+}

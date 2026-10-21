@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "status": "review",
+  "deck_title": "可编辑演示文稿内容审稿示例",
+  "audience": "技术评审专家",
+  "purpose": "在布局前确认逐页结论、完整文案和来源覆盖",
+  "approval_required": true,
+  "slides": [
+    {
+      "slide": 1,
+      "page_role": "技术机理",
+      "question": "系统如何在硬件约束下完成自动映射？",
+      "answer": "应用语义与硬件约束共同驱动任务切分、PE阵列映射和配置生成。",
+      "title": "应用语义与硬件约束共同驱动架构感知映射",
+      "takeaway": "映射器同时读取算子需求和阵列、互连、存储约束，输出可执行配置。",
+      "visual_relationship": "architecture",
+      "content_blocks": [
+        {
+          "heading": "输入",
+          "body": [
+            "应用算子需求画像：算子语义、精度需求、并行特征与数据流模式",
+            "硬件约束：PE阵列、互连拓扑、存储层次与精度引擎"
+          ]
+        },
+        {
+          "heading": "映射机制",
+          "body": [
+            "依次完成任务切分、PE阵列映射、数据流编排与配置生成"
+          ]
+        },
+        {
+          "heading": "输出",
+          "body": [
+            "形成与目标硬件匹配的可执行配置，并进入运行时调度"
+          ]
+        }
+      ],
+      "fact_ids": ["F1", "F2"],
+      "must_show_terms": ["应用算子需求画像", "PE阵列映射", "配置生成"],
+      "source_refs": ["示例报告：自动映射章节"],
+      "audience_can_explain": [
+        "映射器接收哪些应用与硬件信息",
+        "自动映射包含哪些核心动作",
+        "映射最终产生什么结果"
+      ]
+    }
+  ],
+  "evidence_coverage": [
+    {
+      "fact_id": "F1",
+      "priority": "critical",
+      "slides": [1],
+      "visible": true,
+      "rendered_as": "应用算子需求画像和硬件约束共同作为映射输入",
+      "source_location": "示例报告：自动映射章节"
+    },
+    {
+      "fact_id": "F2",
+      "priority": "high",
+      "slides": [1],
+      "visible": true,
+      "rendered_as": "任务切分、PE阵列映射、数据流编排与配置生成",
+      "source_location": "示例报告：自动映射章节"
+    }
+  ],
+  "open_questions": []
+}

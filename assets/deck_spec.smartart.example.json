@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "title": "原生 SmartArt 示例",
+  "language": "zh-CN",
+  "mode": "native",
+  "aspect_ratio": "16:9",
+  "content_profile": {
+    "summary_level": "standard",
+    "title_style": "conclusion_first",
+    "max_nodes_per_slide": 7
+  },
+  "slides": [
+    {
+      "type": "diagram",
+      "title": "内容提炼先于图示生成，图示质量再接受双重检查",
+      "takeaway": "结构化中间层使内容、图示和排版能够分别校验。",
+      "diagram": {
+        "kind": "flow",
+        "direction": "left_to_right",
+        "render": "smartart",
+        "nodes": [
+          {"id": "facts", "label": "提取事实", "role": "start"},
+          {"id": "story", "label": "设计叙事", "role": "process"},
+          {"id": "diagram", "label": "生成图示", "role": "process"},
+          {"id": "qa", "label": "内容与视觉 QA", "role": "end"}
+        ],
+        "edges": [
+          {"from": "facts", "to": "story"},
+          {"from": "story", "to": "diagram"},
+          {"from": "diagram", "to": "qa"}
+        ]
+      }
+    }
+  ]
+}

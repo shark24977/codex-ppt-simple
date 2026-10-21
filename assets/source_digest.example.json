@@ -1,0 +1,24 @@
+{
+  "source": "example-report.pdf",
+  "language": "zh-CN",
+  "facts": [
+    {
+      "id": "fact-1",
+      "statement": "结构化算子通常具有更明确的优化和硬件映射机会。",
+      "source_ref": "example-report.pdf p.2"
+    }
+  ],
+  "terms": [
+    {"term": "Structured Op", "preferred_translation": "结构化算子"}
+  ],
+  "relationships": [
+    {
+      "type": "decision",
+      "from": "规范化输入",
+      "condition": "存在结构化实现",
+      "yes": "转换为 Structured Op",
+      "no": "转换为 Generic 或扩展方言",
+      "source_ref": "example-report.pdf p.3"
+    }
+  ]
+}
